@@ -2,7 +2,7 @@ body {
   margin: 0;
   overflow: hidden;
   background-color: #87CEEB; /* Light blue background */
-  background-image: url('/assets/images/background.png');
+  background-image: url('/assets/images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .handle {
@@ -222,4 +223,9 @@ body {
 
 #restart-button:hover {
   background-color: #45a049; /* Darker green on hover */
+}
+
+footer {
+  margin-top: 1rem;
+  padding:1rem;
 }
