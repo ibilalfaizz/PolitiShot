@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #87CEEB; /* Light blue background */
+  background-image: url('/assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align slingshot to the bottom */
+  height: 100vh;
+
+}
+
+#slingshot {
+  position: absolute;
+  bottom: 20px; /* Fixed at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handle {
+  width: 10px;
+  height: 80px;
+  background-color: brown;
+  position: absolute;
+  bottom: 0;
+}
+
+.left-band, .right-band {
+  width: 60px;
+  height: 10px;
+  background-color: brown;
+  position: absolute;
+  bottom: 40px;
+}
+
+.left-band {
+  transform: rotate(-30deg);
+  left: -20px;
+}
+
+.right-band {
+  transform: rotate(30deg);
+  right: -20px;
+}
+
+.band {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+#rock {
+  position: absolute;
+  width: 70px;
+  height: auto;
+}
+
+#photo {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: left 4s linear, top 4s linear; /* Slower transition (4 seconds) */
+}
+
+.hidden {
+  display: none;
+}
+
+/* Add this to your existing CSS */
+#win-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  /* display: none; */
+}
+/* Health Bar */
+#health-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#hearts img {
+  width: 30px;
+  height: auto;
+}
+
+#hearts img.grey {
+  filter: grayscale(100%); /* Grey out the heart */
+}
+
+#score {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Improved Slingshot */
+#slingshot {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.frame {
+  width: 80px;
+  height: 80px;
+  border: 10px solid brown;
+  border-top: none;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.band {
+  width: 10px;
+  height: 80px;
+  background-color: brown;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.band-handle {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+
+
+/* Target */
+#target {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: left 4s linear, top 4s linear; /* Slower transition (4 seconds) */
+}
+
+/* Win Screen */
+#win-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of everything */
+}
+
+#win-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#win-message {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Restart Button */
+#restart-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's on top of everything */
+}
+
+#restart-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

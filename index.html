@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolitiShot</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Background Sound -->
+    <audio id="background-sound" loop>
+      <source src="/assets/sounds/background.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Health Bar (Hearts) and Score -->
+    <div id="health-bar">
+      <div id="hearts">
+        <img src="/assets/images/heart.png" alt="Heart" />
+        <img src="/assets/images/heart.png" alt="Heart" />
+        <img src="/assets/images/heart.png" alt="Heart" />
+        <img src="/assets/images/heart.png" alt="Heart" />
+        <img src="/assets/images/heart.png" alt="Heart" />
+      </div>
+      <div id="score">Score: 0</div>
+    </div>
+
+    <!-- Improved Slingshot -->
+    <div id="slingshot">
+      <div class="frame"></div>
+      <!-- Y-shaped frame -->
+      <div class="band"></div>
+      <!-- Elastic band -->
+      <div id="band-handle" class="band-handle"></div>
+      <!-- Handle for pulling -->
+    </div>
+
+    <!-- Rock (Slipper) -->
+    <img id="rock" src="/assets/images/slipper.png" alt="Rock" class="hidden" />
+
+    <!-- Target -->
+    <img id="target" src="/assets/images/target.png" alt="Target" />
+
+    <!-- Win Screen -->
+    <div id="win-screen" class="hidden">
+      <img id="win-image" src="/assets/images/win-image.png" alt="You Win!" />
+      <div id="win-message">You Win! Retry Again</div>
+      <!-- Restart Button -->
+      <button id="restart-button">Start Game</button>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
